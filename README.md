@@ -67,15 +67,15 @@
 - [Formato markdown](markdowns/compiladores-montadores-arquivos-objeto-linkers-e-executaveis.md)
 - [Formato Logseq .edn](whiteboards/compiladores-montadores-arquivos-objeto-linkers-e-executaveis.edn)
 
-## Estrutura geral e funcionamento do sistema Android
+## Estrutura geral e funcionamento do sistema android
 - [Formato markdown](markdowns/estrutura-geral-funcionamento-sistema-android.md)
 - [Formato Logseq .edn](whiteboards/estrutura-geral-funcionamento-sistema-android.edn)
 
-## Funcionamento do Magisk
+## Funcionamento do magisk
 - [Formato markdown](markdowns/funcionamento-do-magisk.md)
 - [Formato Logseq .edn](whiteboards/funcionamento-do-magisk.edn)
 
-## Funcionamento dos gerenciadores de pacotes Portage e Pacman
+## Funcionamento dos gerenciadores de pacotes portage e pacman
 - [Formato markdown](markdowns/funcionamento-dos-gerenciadores-de-pacotes-portage-e-pacman.md)
 - [Formato Logseq .edn](whiteboards/funcionamento-dos-gerenciadores-de-pacotes-portage-e-pacman.edn)
 
@@ -93,12 +93,12 @@
 - [Formato markdown](markdowns/roadmap-hacking.md)
 - [Formato Logseq .edn](whiteboards/roadmap-hacking.edn)
 
-## Root e TWRP em dispositivos Samsung
+## Root e TWRP em dispositivos samsung
 - [Formato markdown](markdowns/root-twrp-samsung.md)
 - [Formato Logseq .edn](whiteboards/root-twrp-samsung.edn)
 
 ## English notes
 - [Formato markdown](markdowns/english.md)
 
-## Termos técnicos básicos programação {#glossario-computacao}
+## Glossário computação
 - [Formato markdown](markdowns/termos-tecnicos-basicos-computacao.md)
