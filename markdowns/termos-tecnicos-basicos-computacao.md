@@ -189,4 +189,3 @@
 - **ROM (Read-Only Memory)**: Memória apenas de leitura, geralmente usada para firmware.
 - **Cache**: Memória de alta velocidade que armazena dados usados frequentemente.
 - **Overclocking**: Aumento da frequência de operação de um processador além das especificações de fábrica.
-- **Virtualização**: Técnica que permite executar múltiplos sistemas operacionais em um mesmo hardware físico.
