@@ -15,7 +15,7 @@
 - [Roadmap de hacking](#roadmap-de-hacking)
 - [Root e TWRP em dispositivos Samsung](#root-e-twrp-em-dispositivos-samsung)
 - [English notes](#english-notes)
-- [Glossário de termos técnicos específico na programação](#termos-técnicos-programação)
+- [Glossário de termos técnicos específico na programação](#termos-tecnicos-basicos-programação)
 
 ---
 
@@ -100,5 +100,5 @@
 ## English notes
 - [Formato markdown](markdowns/english.md)
 
-## Termos técnicos programação
+## Termos técnicos básicos programação
 - [Formato markdown](markdowns/termos-tecnicos-basicos-computacao.md)
