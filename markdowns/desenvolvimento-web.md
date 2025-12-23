@@ -1,4 +1,6 @@
-# Nginx
+# Um simples resumo sobre os principais conceitos do desenvolvimento Web
+
+## Nginx
 Um servidor web capaz de atender vários clientes por meio de um pequeno grupo de processos.
 O processos principal é o master, ele é responsável por ler os arquivo de configuração, criar o socket principal na porta definida pelo arquivo de configuração "nginx.conf", e então criar e gerenciar os workers.
 Os workers são os processos responsáveis por lidar com as requisições dos clientes de forma assincrona e não bloqueante, por meio de eventos para cada uma delas.
@@ -35,3 +37,17 @@ utiliza arquivos
 Ele pode agir como:
 Proxy direto: Receber as requisições (dados http) dos clientes, e direcionar elas para a internet.
 Proxy reverso: Onde irá receber as requisições (dados http) dos clientes, e direcionar eles para o servidor da aplicação em si.
+
+Load balancers:
+
+Rotas:
+Aplicações Locais:
+
+## APIs
+Autênticação em APIs.
+
+## Frameworks
+
+## Bancos de dados
+
+## Autênticação
