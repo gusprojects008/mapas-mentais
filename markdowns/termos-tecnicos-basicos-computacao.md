@@ -1,7 +1,7 @@
 # Glossário de Termos Técnicos em Computação
 
 ## Sistemas Operacionais e Processos
-- **DRM (Direct Rendering Manager)**: É um subsistema do kernel linux, responsável por permitir e controlar a comunicação e acesso entre aplicações em espaço de usuário, e GPUs.
+- **DRM (Direct Rendering Manager)**: É um subsistema do kernel linux, responsável por permitir e controlar a comunicação e acesso entre aplicações em espaço de usuário e GPUs.
 - **ACPI (Advanced Configuration Power Interface)**: Padrão que define como o kernel controla dispositivos e gerencia energia (suspensão, estados da CPU) através de tabelas fornecidas pelo firmware (BIOS/UEFI), permitindo a execução de comandos e a resposta a eventos de hardware (ex.: tampa do notebook, botão de energia).
 - **Mutex (Mutual Exclusion)**: Mecanismo de sincronização que garante que apenas uma thread acesse um recurso por vez.
 - **Deadlock**: Situação em que processos ou threads ficam bloqueados aguardando recursos uns dos outros indefinidamente.
