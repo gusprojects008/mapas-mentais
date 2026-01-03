@@ -1,18 +1,18 @@
-# Estrutura do Processo e Internos do Sistema
+# Conceitos fundamentais sobre hardwares, softwares e sistemas operacionais
 
-## Componentes de Hardware
+## Hardwares
 
 ### RAM (Random Access Memory)
 * **Função**: Armazena temporariamente código, dados e arquivos de programas durante sua execução.
-    * É um componente passivo, que apenas armazena dados em endereços físicos de células de memória.
-    * O processador acessa e busca dinamicamente os dados nesses endereços, carregando-os nos registradores ou cache para processamento.
+    * É um componente passivo, que apenas armazena dados e instruções de programas em execução, esses dados e intruções são vários bits alocados de forma organizada nas células de memória, mas a nível de software e hardware, trabalhamos apenas com o endereçamento a nível de byte, um byte é o conjunto de 8 células memória, e cada célula de memória pode armazenar um bit, assim podendo representar dados ou instruções a seres executadas pela CPU.
+    * O processador busca dados e instruções usando endereços virtuais, que são traduzidos pela MMU em endereços físicos de memória, e através da unidade IMC, a operação específica com os dados ou instruções associados ao endereço físico são relizadas (Ler ou Escrever).
 * **Características Físicas**:
     * A memória RAM convencional não usa drivers ou firmware ativo para alocação ou atualização de dados.
-    * A comunicação é feita diretamente entre o processador e as unidades físicas de memória.
+    * A comunicação é feita diretamente através de unidades específicas no processador para comunicação de gerencimento da memória raa (MMU e IMC).
     * Módulos de RAM (DDR4/DDR5) podem ter circuitos auxiliares e firmware para funções específicas como Power Management Integrated Circuit (PMIC) ou Error Correction Code (ECC).
 * **Mecanismo de Acesso**:
     * Circuitos passivos na RAM acessam e executam as operações do Integrated Memory Controller (IMC) do processador.
-    * O IMC envia um endereço de memória e um bit para ser armazenado através de barramentos.
+    * O processador envia ao IMC um endereço, um comando de escrita e dados (normalmente em unidades de bytes ou palavras), que são transmitidos pelos barramentos.
     * Circuitos lógicos internos da RAM decodificam o endereço para acessar linhas e colunas específicas e realizar a operação de leitura ou escrita.
 
 ### CPU (Unidade de Processamento Central)
@@ -22,7 +22,7 @@
     * **MMU (Memory Management Unit)**: Mapeia endereços virtuais das tabelas de páginas dos processos para endereços físicos na RAM.
         * Atua quando uma instrução do programa tenta acessar um endereço virtual.
         * Ela "intercepta" e resolve o endereço virtual para físico, usando o IMC para acessar os dados na RAM.
-    * **IMC (Integrated Memory Controller)**: Unidade do processador que acessa endereços de memória na RAM.
+    * **IMC (Integrated Memory Controller)**: Unidade responsável por intermediar o acesso da CPU à memória RAM, recebendo endereços físicos byte-endereçáveis e traduzindo-os em comandos DRAM (como ativação de linha, leitura e escrita), mapeando o endereço para canal, rank, banco, linha e coluna no chip físico de memória. Esses comandos DRAM são executados diretamente por círcuitos e barramentos físicos da memória RAM. 
 * **Registradores Especiais**:
     * **CR3 (Page Table Base Register)**: Registrador gerenciado pelo kernel que armazena o endereço físico da PGD (Page Global Directory), a página raiz do processo.
     * O kernel altera o CR3 durante trocas de contexto, criação de novos processos ou modificação de tabelas de páginas.
@@ -36,13 +36,13 @@
     * É armazenado na partição de boot (`/boot`) do dispositivo de armazenamento.
     * É compilado e comprimido (geralmente `bzimage`) para ser carregado mais rapidamente na RAM pelo bootloader (ex: grub, syslinux).
     * Descomprime-se na RAM em código de máquina e assume o controle da inicialização do sistema.
-    * Gerencia e configura os diversos subsistemas e estrutura de dados para mapeamento de interrupções, dispositivos, recursos, sinais para poder realizar a comunicação entre os dispositivos (hardware) e processos (softwares), umas delas é a tabela IDT (Interruption Descriptor Table) que é usada pelo processador para lidar com interrupções do sistema e assim encontrar o endereço de memória da ISR reponsável por lidar com essa interrupção que pode ser hardware ou software.
+    * Gerencia e configura subsistemas e estruturas de dados responsáveis pelo mapeamento de interrupções, dispositivos e recursos do sistema, permitindo a interação entre o hardware e o kernel. Uma dessas estruturas é a IDT (Interrupt Descriptor Table), utilizada pelo processador para tratar interrupções e exceções, associando cada vetor de interrupção ao endereço da ISR (Interrupt Service Routine) correspondente, que pode ser acionada por eventos de hardware ou por interrupções de software.
     * Os subsitemas dele criam e gerenciam as interfaces para dispositivos e recursos do sistema, como o TTY (Terminal Tele Type) que usa a interface de dados de entrada do teclado `/dev/tty1` para o para fornecer uma interface de linha de comando em texto básica.
 
 ## Gerenciamento de Processos e Memória
 
 ### Processos
-* **Definição**: Instâncias de um programa carregado na RAM, em um estado específico (em execução, pronto, dormindo, etc.).
+* **Definição**: Instância de um programa carregado na memória RAM, é executado em um contexto isolado e específico, ele pode estar em um estado específico, como: execução, pronto, dormindo, etc...
 * **Estruturas Críticas (em GNU/Linux)**:
     * **PCB (Process Control Block)**: Estrutura gerenciada pelo kernel para controle e organização hierárquica dos programas.
         * Armazenada no espaço de memória do kernel (não é paginável ou "swappada").
@@ -88,7 +88,7 @@
 
 ### File Descriptors (FDs)
 * **Definição**: Números inteiros não negativos que representam recursos abertos por um processo (arquivos, dispositivos, sockets).
-* **Estruturas Associadas**:
+* **Estruturas Associadas**:q
     * A ISR usa o valor do FD para localizar a estrutura correspondente e chamar a função do driver.
     * A estrutura de um FD contém um ponteiro para o `inode` e para a estrutura `file_operations` do driver.
     * **`inode`**: Contém metadados do arquivo/dispositivo e um ponteiro para a `file_operations`.

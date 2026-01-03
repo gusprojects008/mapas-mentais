@@ -2,17 +2,17 @@
 
 - ## Learning order (Ordem de estudo):
   - [Classes de palavras](#word-classes)
-  - [Ordem das palavras (SVO)](#words-order-svo)
+  - [Ordem das palavras (SVO)](#word-order-svo)
   - [Verbos](#verbs)
     - Regular and irregular verbs
     - Verb tenses
-  - [Palvras básicas do inglês](#basic-english-words)
+  - [Palavras básicas do inglês](#basic-english-words)
 
 ---
 
 ### Word Classes (Classes de palavras)
 
-- **Noun (Substantivo)**: Names people, places, things, feelings, or ideas.  
+- **Noun (Substantivo)**: Names people, places, things, feelings, and ideas.  
   **Examples**: Gustavo, dog, car, the FBI, flower.
 
 - **Adjective (Adjetivo)**: Qualifies or characterizes a noun.  
@@ -25,7 +25,7 @@
   Indicates manner, intensity, time, frequency, or place.  
   **Examples**: quickly (rapidamente), bravely (bravamente), happily (felizmente), why (por que), how (como).
 
-- **Pronoun (Pronome)**: Replaces or accompanies a noun.  
+- **Pronoun (Pronome)**: Replaces a noun.  
   **Examples**: you, my, myself (eu mesmo), this, who (quem), nobody (ninguém).
 
 - **Prepositions (Preposições)**: Link words, indicating relationships of time, place, direction, cause, etc.  
@@ -45,11 +45,11 @@
 
 ---
 
-### Words Order (SVO)
+### Word Order (SVO)
 
 - **Affirmative sentences**:
   - **Basic structure**:  
-    `Subject + Main verb + (s/es for he/she/it) + Object + Complement (optional)`
+    `Subject + Verb (Conjugated) + Object/Complement (optional)`
   - **Examples**:
     - ***I play soccer.*** = Eu jogo futebol.  
       Verbal form: First person singular, simple present.
@@ -74,7 +74,7 @@
 
 - **Interrogative sentences**:
   - **Basic structure**:  
-    `Auxiliary verb (Do/Does/Did/Will/Is/Are) + Subject + Main verb + Object/Complement`
+    `Auxiliary verb or verb to be + Subject + Main verb + Object/Complement`
     
   - **Examples**:
     - ***Do I play soccer well?*** = Eu jogo futebol bem?  
