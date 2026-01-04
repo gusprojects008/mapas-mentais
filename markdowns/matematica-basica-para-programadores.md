@@ -21,7 +21,7 @@
 - **`Porcentagem`**: A porcentagem é usada para comparar valores proporcionalmente, indicando quantas partes de 100 um valor representa. Na maioria das linguagens de programação (ao contrário do que muitos pensam), o operador `%` NÃO representa a porcentagem, mas sim a operação de módulo (ver a seguir). A maioria das linguagens não possui um operador aritmético específico associado à porcentagem. A fórmula para operações de porcentagem pode ser expressa como `Valor a ser descontado = Preço * Desconto / 100` então nesse caso, para achar o valor que será descontado do preço real do produto, é necessário saber apenas quantas partes de 100 esse **Desconto** representa em relação ao valor base, então fazer a subtração entre o **Preço** e o **Valor a ser descontado** resultante da operação `Preço * Desconto / 100`.
   - Operação em termos matemáticos: `Valor percentual = Valor base * Porcentagem / 100`
 
-- **`%`**: Esse operador é conhecido como ***módulo (mod)*** e é usado para calcular e retornar o resto da divisão entre inteiros. Exemplo: `10 % 3 = 1` (pois 3 cabe 3 vezes em 10, sobrando 1).
+- **`%`**: Esse operador é conhecido como ***módulo (mod)*** e é usado para calcular e retornar o resto da divisão entre inteiros. Exemplo: `10 % 3 = 1` (pois 3 cabe 3 vezes em 10, sobrando 1), a fórmula correta para cálcular: resto = dividendo - divisor * quociente.
 
 - **`!`**: Fatorial calcula o produto de todos os inteiros positivos de 1 até `n`. Exemplo: `5! = 5 × 4 × 3 × 2 × 1 = 120`. Muito usado em **combinatória** (contar possibilidades), **recursão**, análise de **complexidade** e problemas de permutação.
   - Operação em termos matemáticos: `n! = n × (n-1) × (n-2) × ... × 1`
