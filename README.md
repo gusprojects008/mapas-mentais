@@ -1,7 +1,7 @@
 # Mapas mentais
 
 ## Índices
-- [Estrutura de processos do Linux](#estrutura-de-processos-criação-e-funcionamento)
+- [Conceitos fundamentais sobre hardwares, softwares e sistemas operacionais](#fundamentos-hardwares-softwares-sistemas-operacionais)
 - [Arch Linux](#arch-linux)
 - [Ataques a redes Wi-Fi](#ataques-a-redes-wi-fi)
 - [Como a CPU armazena dados na RAM](#como-a-cpu-armazena-dados-na-ram)
